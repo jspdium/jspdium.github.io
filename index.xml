@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jorge Sousa Pinto</title>
-    <link>https:/</link>
+    <link>https://jspdium.github.io/</link>
     <description>Recent content on Jorge Sousa Pinto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2022 18:27:45 +0100</lastBuildDate><atom:link href="https:/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2022 18:27:45 +0100</lastBuildDate><atom:link href="https://jspdium.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https:/untitled/</link>
+      <link>https://jspdium.github.io/untitled/</link>
       <pubDate>Sat, 29 Oct 2022 19:17:33 +0100</pubDate>
       
-      <guid>https:/untitled/</guid>
+      <guid>https://jspdium.github.io/untitled/</guid>
       <description>Noir prophet on tv Their life, their own way You can never quarantine the past</description>
     </item>
     
     <item>
       <title>JSS&#39;21</title>
-      <link>https:/papers/jss21/</link>
+      <link>https://jspdium.github.io/papers/jss21/</link>
       <pubDate>Wed, 12 Oct 2022 18:27:45 +0100</pubDate>
       
-      <guid>https:/papers/jss21/</guid>
+      <guid>https://jspdium.github.io/papers/jss21/</guid>
       <description>A Deductive Reasoning Approach for Database Applications using Verification Conditions I. Alam, R. Halder, and J. S. Pinto. Journal of Systems and Software, 175:110903, 2021. Elsevier
 RepositoriUM
 Springer
@@ -30,28 +30,28 @@ This paper proposes a comprehensive set of Verification Conditions (VCs) generat
     
     <item>
       <title>Why3do</title>
-      <link>https:/papers/why3do/</link>
+      <link>https://jspdium.github.io/papers/why3do/</link>
       <pubDate>Wed, 12 Oct 2022 18:19:52 +0100</pubDate>
       
-      <guid>https:/papers/why3do/</guid>
+      <guid>https://jspdium.github.io/papers/why3do/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PaxosRfnWhy3</title>
-      <link>https:/why3-projects/paxosrfnwhy3/</link>
+      <link>https://jspdium.github.io/why3-projects/paxosrfnwhy3/</link>
       <pubDate>Tue, 11 Oct 2022 12:42:12 +0100</pubDate>
       
-      <guid>https:/why3-projects/paxosrfnwhy3/</guid>
+      <guid>https://jspdium.github.io/why3-projects/paxosrfnwhy3/</guid>
       <description>With Cláudio Lourenço I am investigating the use of Why3 to verify safety properties of TLA specifications (without temporal operators). We have successfuly verified the Paxos consensus algorithm, following Lamport&amp;rsquo;s refinement of the abstract Voting protocol. We will report on this soon.</description>
     </item>
     
     <item>
       <title>A verified VCGen based on Dynamic Logic</title>
-      <link>https:/why3-projects/dlkey/</link>
+      <link>https://jspdium.github.io/why3-projects/dlkey/</link>
       <pubDate>Tue, 11 Oct 2022 12:23:41 +0100</pubDate>
       
-      <guid>https:/why3-projects/dlkey/</guid>
+      <guid>https://jspdium.github.io/why3-projects/dlkey/</guid>
       <description>An exercise in meta-verification with Why3. This unpublished paper, co-authored with Maria João Frade, is dedicated to our colleague Luís Soares Barbosa, on the occasion of his 60th birthday.
 With the incresasing importance of program verification, an issue that has been receiving more attention is the certification of verification tools, addressing the question: “Who verifies the verifier?”.
 We approach this meta-verification problem by considering a fundamental component of program verifiers: the “Verification Conditions Generator” (VCGen), responsible for producing a set of proof obligations from a program and a specification.</description>
@@ -59,10 +59,10 @@ We approach this meta-verification problem by considering a fundamental componen
     
     <item>
       <title>Why3-do</title>
-      <link>https:/why3-projects/why3do/</link>
+      <link>https://jspdium.github.io/why3-projects/why3do/</link>
       <pubDate>Tue, 11 Oct 2022 11:38:06 +0100</pubDate>
       
-      <guid>https:/why3-projects/why3do/</guid>
+      <guid>https://jspdium.github.io/why3-projects/why3do/</guid>
       <description>The Way of Harmonious Distributed System Proofs. In this ESOP&#39;22 paper jointly written with Cláudio Belo Lourenço, we study principles and models for reasoning inductively about properties of distributed systems, based on programmed atomic handlers equipped with contracts. We present the Why3-do library, leveraging a state of the art software verifier for reasoning about distributed systems based on our models, and illustrate its use with a number of examples involving invariants containing existential and nested quantifiers (including Dijsktra’s self-stabilizing systems).</description>
     </item>
     
