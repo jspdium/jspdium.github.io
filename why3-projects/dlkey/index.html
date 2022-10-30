@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href=/images/lotus.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="A verified VCGen based on Dynamic Logic" />
+<meta property="og:description" content="An exercise in meta-verification with Why3. This unpublished paper, co-authored with Maria João Frade, is dedicated to our colleague Luís Soares Barbosa, on the occasion of his 60th birthday.
+With the incresasing importance of program verification, an issue that has been receiving more attention is the certification of verification tools, addressing the question: “Who verifies the verifier?”.
+We approach this meta-verification problem by considering a fundamental component of program verifiers: the “Verification Conditions Generator” (VCGen), responsible for producing a set of proof obligations from a program and a specification." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/why3-projects/dlkey/" /><meta property="article:section" content="Why3 Projects" />
+<meta property="article:published_time" content="2022-10-11T12:23:41+01:00" />
+<meta property="article:modified_time" content="2022-10-11T12:23:41+01:00" /><meta property="og:site_name" content="jsp" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A verified VCGen based on Dynamic Logic"/>
+<meta name="twitter:description" content="An exercise in meta-verification with Why3. This unpublished paper, co-authored with Maria João Frade, is dedicated to our colleague Luís Soares Barbosa, on the occasion of his 60th birthday.
+With the incresasing importance of program verification, an issue that has been receiving more attention is the certification of verification tools, addressing the question: “Who verifies the verifier?”.
+We approach this meta-verification problem by considering a fundamental component of program verifiers: the “Verification Conditions Generator” (VCGen), responsible for producing a set of proof obligations from a program and a specification."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: darkorange;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: navy;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: orange;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: beige;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+A verified VCGen based on Dynamic Logic | Jorge Sousa Pinto
+
+  </title>
+</head>
+
+<body class="light" onload="loading()">
+  
+  
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/lotus.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                jsp
+                
+            </a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">About</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">Contact</a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/untitled" title="untitled">
+                            
+                            Untitled
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/why3-projects" title="VerifiWhy3">
+                            
+                            Why3 Projects
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/papers" title="Papers">
+                            
+                            Recent Papers
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Program Committees">
+                            PCs
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="https://formalmethods2019.inesctec.pt"
+                                title="23rd International Symposium on Formal Methods">
+                                FM 2019
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="https://www.formalise.org/content/formalise-2020"
+                                title="8th International Conference on Formal Methods in Software Engineering">
+                                FORMALISE 2020
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="http://ifm2019.hvl.no/"
+                                title="15th International Conference on integrated Formal Methods">
+                                IFM 2019
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="https://sites.google.com/view/fmbc"
+                                title="1st Workshop on Formal Methods for Blockchains">
+                                FMBC 2019
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="http://vecos-world.org/2019/"
+                                title="13th International Conference on Verification and Evaluation of Computer and Communication Systems">
+                                VECoS 2019
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#teaching"
+                            aria-label="teaching">Teaching</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#projects"
+                            aria-label="projects">Books</a>
+                    </li>
+                    
+
+		    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">Research Projects</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#students"
+                            aria-label="students">Students</a>
+                    </li>
+                    
+
+                </ul>
+
+                
+                
+                <div class="text-center">
+                    <button id="theme-toggle">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            
+                
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">A verified VCGen based on Dynamic Logic</h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Oct 11, 2022
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h3 id="an-exercise-in-meta-verification-with-why3">An exercise in meta-verification with Why3.</h3>
+<p>This unpublished paper, co-authored with Maria João Frade, is
+dedicated to our colleague Luís Soares Barbosa, on the occasion of his
+60th birthday.</p>
+<p>With the incresasing importance of program verification, an issue that
+has been receiving more attention is the certification of verification
+tools, addressing the question: “Who verifies the verifier?”.</p>
+<p>We approach this meta-verification problem by considering a
+fundamental component of program verifiers: the “Verification
+Conditions Generator” (VCGen), responsible for producing a set of
+proof obligations from a program and a specification. The semantic
+foundations of VCGens lie in program logics, such as Hoare logic,
+Dynamic logic, or Separation logic, and related predicate
+transformers. Dynamic logic is the basis of the KeY system, one of the
+foremost deductive verifiers, whose logic makes use of the notion of
+update, which is quite intricate to formalize. We derive
+systematically, based on a KeY-style dynamic logic, a
+correct-by-construction VCGen for a toy programming language.</p>
+<p>The workflow covers the entire process, from the logic to the
+VCGen. It is implemented in the Why3 tool, which is itself a program
+verifier. We prove soundness and (an appropriate notion of)
+completeness of the logic w.r.t. the programming language semantics,
+then write a VCGen for the logic and prove its soundness. The VCGen is
+written as a program in WhyML (the internal Why3 programming
+language), that can be extracted to OCaml code. We reason about the
+(dynamic) program logic in Why3’s logic language, but then use the
+programming language to actually implement the VCGen.</p>
+<p><a href="https://www.dropbox.com/s/p27kwk5kgfsutwc/dlKeY.pdf?dl=0">Draft paper</a></p>
+<p>The Why3 development is available on
+<a href="https://github.com/jspdium/dlKeY">GitHub</a>.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#an-exercise-in-meta-verification-with-why3">An exercise in meta-verification with Why3.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=A%20verified%20VCGen%20based%20on%20Dynamic%20Logic&url=https%3a%2fwhy3-projects%2fdlkey%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=A%20verified%20VCGen%20based%20on%20Dynamic%20Logic: https%3a%2fwhy3-projects%2fdlkey%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject=A%20verified%20VCGen%20based%20on%20Dynamic%20Logic&amp;body=Check out this site https%3a%2fwhy3-projects%2fdlkey%2f">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+  </div><footer>
+    
+    
+
+    
+    
+
+    <div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https:" title="Jorge Sousa Pinto">
+                    <img alt="Footer logo" src="/images/lotus.png"
+                        height="50px" width="50px">
+                </a>
+            </di> 
+            &copy; 2022  
+            <div class="text-secondary">
+	       Powered by <a href="https://gohugo.io/" target="_blank"
+	      title="Hugo">
+	       Hugo
+                </a>
+                Theme adapted from 
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+<script>
+    let loadingIcons;
+
+    function loading() {
+        myVar = setTimeout(showPage, 100);
+    }
+
+    function showPage() {
+        try{
+            document.getElementById("loading-icons").style.display = "block";
+        } catch(err) {}
+    }
+</script></body>
+
+</html>

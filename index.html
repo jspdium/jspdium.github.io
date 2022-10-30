@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="generator" content="Hugo 0.104.3" /><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href=/images/lotus.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="Jorge Sousa Pinto" />
+<meta property="og:description" content="Text about my cool site" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https:/" /><meta property="og:site_name" content="jsp" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Jorge Sousa Pinto"/>
+<meta name="twitter:description" content="Text about my cool site"/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: darkorange;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: navy;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: orange;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: beige;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+</style>
+
+<meta name="description" content=Text&#32;about&#32;my&#32;cool&#32;site>
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Jorge Sousa Pinto
+
+  </title>
+</head>
+
+<body class="light" onload="loading()">
+  
+  
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/lotus.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                jsp
+                
+            </a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">About</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">Contact</a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/untitled" title="untitled">
+                            
+                            Untitled
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/why3-projects" title="VerifiWhy3">
+                            
+                            Why3 Projects
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/papers" title="Papers">
+                            
+                            Recent Papers
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Program Committees">
+                            PCs
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="https://formalmethods2019.inesctec.pt"
+                                title="23rd International Symposium on Formal Methods">
+                                FM 2019
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="https://www.formalise.org/content/formalise-2020"
+                                title="8th International Conference on Formal Methods in Software Engineering">
+                                FORMALISE 2020
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="http://ifm2019.hvl.no/"
+                                title="15th International Conference on integrated Formal Methods">
+                                IFM 2019
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="https://sites.google.com/view/fmbc"
+                                title="1st Workshop on Formal Methods for Blockchains">
+                                FMBC 2019
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="http://vecos-world.org/2019/"
+                                title="13th International Conference on Verification and Evaluation of Computer and Communication Systems">
+                                VECoS 2019
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#teaching"
+                            aria-label="teaching">Teaching</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#projects"
+                            aria-label="projects">Books</a>
+                    </li>
+                    
+
+		    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">Research Projects</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#students"
+                            aria-label="students">Students</a>
+                    </li>
+                    
+
+                </ul>
+
+                
+                
+                <div class="text-center">
+                    <button id="theme-toggle">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            
+                
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="hero" class="py-5 align-middle">
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
+                <span class="subtitle">
+                    Webpage of
+                </span>
+                <h2>
+                    Jorge Sousa Pinto
+                </h2>
+                <h3>
+                    
+                </h3>
+                <p class="hero-content">
+                    
+                </p>
+                <div class="row">
+                    <div class="col-auto h-100">
+                        
+                        <a href="JSP-short-CV.pdf" class="btn" download>
+                            Resume
+                        </a>
+                        
+                    </div>
+                    <div class="col-auto px-0 h-100"><span id="loading-icons" style="display: none;">
+    
+    <span class="px-1">
+        <a href="https://scholar.google.com/citations?user=45QPIOIAAAAJ&amp;hl=en" target="_blank" class="btn social-icon">
+            <i class="fab fa-google"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://dblp.org/pid/54/5302.html" target="_blank" class="btn social-icon">
+            <i class="fab fa-dblp"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://orcid.org/0000-0002-0892-3577" target="_blank" class="btn social-icon">
+            <i class="fab fa-orcid"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/jorge-sousa-pinto-155ba266" target="_blank" class="btn social-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://github.com/jspdium" target="_blank" class="btn social-icon">
+            <i class="fab fa-github"></i>
+        </a>
+    </span>
+    
+
+    
+</span></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                        <img src="/images/me.png" 
+                            class="img-thumbnail mx-auto" 
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-bottom-svg d-md-block d-lg-block d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
+            <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </g>
+        </svg>
+    </div>
+</section>
+
+<section id="about" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">About Me</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+                I am an associate professor with habilitation at the Computer Science Department, Universidade do Minho, and a senior researcher at the High Assurance Software laboratory, HASLab/INESCTEC. My main research focuses on &hellip;
+
+                
+                Here are a few technologies I&#39;ve been working with recently:
+                <ul>
+                    
+                    <li>Formal Verification</li>
+                    
+                    <li>Program Logics</li>
+                    
+                    <li>Verification Conditions</li>
+                    
+                    <li>Automated Reasoning</li>
+                    
+                    <li>Programming Language Semantics</li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="teaching" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Teaching</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2022</small>
+                                </div>
+                                <h5 class="card-title">Métodos Formais em Engenharia de Software</h5>
+                                
+                                
+                                <a href="https://web.di.uminho.pt/sitedi/meinf/" target="_blank">
+                                    <h6>
+                                    Mestrado em Engenharia Informática (MSc in Software Engineering)
+                                    </h6>
+                                </a>
+                                
+
+                                <div class="py-1 teaching-content">
+                                    An introduction to Formal Methods covering logic, automated reasoning, structural and behavioral modeling with Alloy, and deductive verification with Why3
+                                </div>
+
+                                
+                                <div class="py-1">
+                                    <a href="https://haslab.github.io/MFES/index" class="btn">
+                                        course webpage (pt)
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2022</small>
+                                </div>
+                                <h5 class="card-title">Algoritmos e Complexidade</h5>
+                                
+                                
+                                <a href="https://web.di.uminho.pt/sitedi/enginf/" target="_blank">
+                                    <h6>
+                                    Licenciatura em Engenharia Informática (BSc in Software Engineering)
+                                    </h6>
+                                </a>
+                                
+
+                                <div class="py-1 teaching-content">
+                                    An undergraduate course on Algorithms, essentialy covering the core (and some advanced) topics of <a href="https://csed.acm.org/cs2013-version/">AL–CS2013</a> in the IEEE/ACM curricula
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2022</small>
+                                </div>
+                                <h5 class="card-title">Verificação Formal</h5>
+                                
+                                
+                                <a href="https://web.di.uminho.pt/sitedi/meinf/" target="_blank">
+                                    <h6>
+                                    Mestrado em Engenharia Informática (MSc in Software Engineering)
+                                    </h6>
+                                </a>
+                                
+
+                                <div class="py-1 teaching-content">
+                                    An elective course on formal verification, covering assisted proofs with Coq,
+                                </div>
+
+                                
+                                <div class="py-1">
+                                    <a href="https://haslab.github.io/MFP/VF/2122/index" class="btn">
+                                        course webpage (pt)
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Books and Edited Volumes</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="An Introduction to Program Verification">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/projects/rsd-book.png" alt="An Introduction to Program Verification">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">An Introduction to Program Verification</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            José Bacelar Almeida, Maria João Frade, Jorge Sousa Pinto, Simão Melo De Sousa. Springer Undergraduate Topics in Computer Science, 2011
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://www.amazon.com/-/es/Jos%c3%a9-Bacelar-Almeida/dp/0857290177/ref=sr_1_1?__mk_es_US=%c3%85M%c3%85%c5%bd%c3%95%c3%91&amp;crid=3FA2C3WC3V9QU&amp;keywords=rigorous&#43;software&#43;development&amp;qid=1666270448&amp;qu=eyJxc2MiOiIwLjAwIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&amp;sprefix=rigorous&#43;software&#43;development%2Caps%2C217&amp;sr=8-1" target="_blank">
+                                <i class="fab fa-amazon"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="https://di.uminho.pt/rsd-book/" target="_blank">
+                                booksite
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="A Tribute to José Manuel Valença">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/projects/JMV_tribute.png" alt="A Tribute to José Manuel Valença">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">A Tribute to José Manuel Valença</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            I had the pleasure to be one of the editors of a volume published as a tribute to my colleague José Manuel Valença.
+ José Nuno Oliveira, Jorge Sousa Pinto, Luís Soares Barbosa, Pedro Rangel Henriques: A tribute to José Manuel Valença. J. Log. Algebraic Methods Program. 128: 100792 (2022).
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="https://www.sciencedirect.com/journal/journal-of-logical-and-algebraic-methods-in-programming/special-issue/10457LSJK51" target="_blank">
+                                Sciencedirect
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="Hugo Profile V2">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/projects/profile2.jpg" alt="Hugo Profile V2">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">Hugo Profile V2</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            A clean and simple Hugo template for personal portfolio and blog.
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/gurusabarish/HugoProfileV2" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="https://hugo-profile-2.netlify.app" target="_blank">
+                                Demo V2
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Research Projects</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent" id="pills-tab" role="tablist">
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div 
+                                class="nav-link active bg-transparent" 
+                                aria-selected="true" 
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='SAFER-2018---2021-tab'
+                                data-bs-target='#pills-SAFER-2018---2021'
+                                aria-controls='SAFER-2018---2021' 
+                            >
+                                SAFER
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div 
+                                class="nav-link bg-transparent" 
+                                aria-selected="true" 
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='REASSURE-2018---2021-tab'
+                                data-bs-target='#pills-REASSURE-2018---2021' 
+                                aria-controls='REASSURE-2018---2021'
+                            >
+                                REASSURE
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div 
+                                class="nav-link bg-transparent" 
+                                aria-selected="true" 
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='AVIACC-2012---2015-tab'
+                                data-bs-target='#pills-AVIACC-2012---2015' 
+                                aria-controls='AVIACC-2012---2015'
+                            >
+                                AVIACC
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
+                        
+                        
+                        <div 
+                            class="tab-pane fade show active bg-transparent" 
+                            role="tabpanel"
+                            id='pills-SAFER-2018---2021'
+                            aria-labelledby='pills-SAFER-2018---2021-tab'
+                        >
+                            <div>
+                                <span class="h4">Safety Verification for Robotic Software</span>
+                                <small>-</small>
+                                <a href="http://haslab.github.io/SAFER/" target="_blank">SAFER</a>
+                                <div class="pb-1">
+                                    <small>2018 - 2021</small>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=http://haslab.github.io/SAFER/ target="_blank">
+                                        website 
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            A project exploring applications of formal methods in the context of robotics systems. FCT-funded.
+                        </div>
+                        
+                        
+                        
+                        <div 
+                            class="tab-pane fade bg-transparent" 
+                            role="tabpanel"
+                            id='pills-REASSURE-2018---2021'
+                            aria-labelledby='pills-REASSURE-2018---2021-tab'
+                        >
+                            <div>
+                                <span class="h4">Runtime Verification for Reliable Real-Time Embedded Software</span>
+                                <small>-</small>
+                                <a href="https://cister-labs.pt/projects/reassure/" target="_blank">REASSURE</a>
+                                
+                                <div class="pb-1">
+                                    <small>2018 - 2021</small>
+                                    
+                                </div>
+                                
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://cister-labs.pt/projects/reassure/ target="_blank">
+                                        website 
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                The goal of this project is to develop a new framework that extends existing runtime monitoring infrastructures with features to guarantee safety and avoid security leaks, allowing for monitors to be automatically generated  and deployed. FCT-funded.
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div 
+                            class="tab-pane fade bg-transparent" 
+                            role="tabpanel"
+                            id='pills-AVIACC-2012---2015'
+                            aria-labelledby='pills-AVIACC-2012---2015-tab'
+                        >
+                            <div>
+                                <span class="h4">Analysis and Verification of Critical Concurrent Programs</span>
+                                <small>-</small>
+                                <a href="http://wiki.di.uminho.pt/twiki/bin/view/Research/Aviacc/WebHome" target="_blank">AVIACC</a>
+                                
+                                <div class="pb-1">
+                                    <small>2012 - 2015</small>
+                                    
+                                </div>
+                                
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=http://wiki.di.uminho.pt/twiki/bin/view/Research/Aviacc/WebHome target="_blank">
+                                        website 
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                A project that explored the interplay between deductive methods and model checking, for the verification of safety-critical systems. FCT-funded.
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="students" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Former Research Students</h3>
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-3 px-md-5 px-lg-5">
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/andpedro" title="André de Matos Pedro" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">André de Matos Pedro</h5>
+                            <div class="card-text secondary-font">
+                                Researcher at Vortex-CoLab (Portugal)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/belolourenco" title="Cláudio Belo Lourenço" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">Cláudio Belo Lourenço</h5>
+                            <div class="card-text secondary-font">
+                                Programming Languages Researcher, Huawei Technologies Research &amp; Development (UK) Ltd
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/danieladacruz" title="Daniela da Cruz" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">Daniela da Cruz</h5>
+                            <div class="card-text secondary-font">
+                                VP of Engineering, Checkmarx (Israel / Portugal)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="Senior%20Software%20EngineerSenior%20Software%20Engineer,%20r2c%20%28USA%29" title="Iago Abal" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">Iago Abal</h5>
+                            <div class="card-text secondary-font">
+                                Researcher at Vortex-CoLab (Portugal)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/jcp19" title="João Carlos Pereira" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">João Carlos Pereira</h5>
+                            <div class="card-text secondary-font">
+                                Research student at the Programming Methodology group, Zürich (Switzerland)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/jo%c3%a3o-martins-75b84b45" title="João Martins" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">João Martins</h5>
+                            <div class="card-text secondary-font">
+                                Frameworks and Software Architecture Leader, EFACEC (Portugal)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/jmfaria" title="José Miguel Faria" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">José Miguel Faria</h5>
+                            <div class="card-text secondary-font">
+                                Director at Safe Perspective Ltd (UK, 2015-2018)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="Researcher%20at%20Instituto%20de%20Aeron%c3%a1utica%20e%20Espa%c3%a7o%20%28IAE,%20Brazil%29" title="Rovedy Silva" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">Rovedy Silva</h5>
+                            <div class="card-text secondary-font">
+                                Researcher at Vortex-CoLab (Portugal)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                <div class="col-lg-4 col-md-6 my-3">
+                    <a class="card my-3 h-100 p-3" href="https://www.linkedin.com/in/victor-cacciari-miraldo-6b106b1a9" title="Vítor Miraldo" target="_blank">
+                        <div class="card-body bg-transparent">
+                            <h5 class="card-title bg-transparent">Vítor Miraldo</h5>
+                            <div class="card-text secondary-font">
+                                Software Engineer at Channable (Utrecht, Netherlands)
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Contact Me</h3>
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-md-5">
+                <div class="col-md-8 py-3">
+                    <div class="text-center">
+                        
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <a href="mailto:jsp@di.uminho.pt" class="btn">
+                            Email
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  </div><footer>
+    
+    
+
+    
+    
+
+    <div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https:" title="Jorge Sousa Pinto">
+                    <img alt="Footer logo" src="/images/lotus.png"
+                        height="50px" width="50px">
+                </a>
+            </di> 
+            &copy; 2022  
+            <div class="text-secondary">
+	       Powered by <a href="https://gohugo.io/" target="_blank"
+	      title="Hugo">
+	       Hugo
+                </a>
+                Theme adapted from 
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+<script>
+    let loadingIcons;
+
+    function loading() {
+        myVar = setTimeout(showPage, 100);
+    }
+
+    function showPage() {
+        try{
+            document.getElementById("loading-icons").style.display = "block";
+        } catch(err) {}
+    }
+</script></body>
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Papers on Jorge Sousa Pinto</title>
+    <link>https:/papers/</link>
+    <description>Recent content in Papers on Jorge Sousa Pinto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Oct 2022 18:27:45 +0100</lastBuildDate><atom:link href="https:/papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSS&#39;21</title>
+      <link>https:/papers/jss21/</link>
+      <pubDate>Wed, 12 Oct 2022 18:27:45 +0100</pubDate>
+      
+      <guid>https:/papers/jss21/</guid>
+      <description>A Deductive Reasoning Approach for Database Applications using Verification Conditions I. Alam, R. Halder, and J. S. Pinto. Journal of Systems and Software, 175:110903, 2021. Elsevier
+RepositoriUM
+Springer
+This paper proposes a comprehensive set of Verification Conditions (VCs) generation techniques from database programs, adapting Symbolic Execution, Conditional Normal Form, and Weakest Precondition. The validity checking of the generated VCs for a database program determines its correctness w.r.t. the annotated database properties.</description>
+    </item>
+    
+    <item>
+      <title>Why3do</title>
+      <link>https:/papers/why3do/</link>
+      <pubDate>Wed, 12 Oct 2022 18:19:52 +0100</pubDate>
+      
+      <guid>https:/papers/why3do/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
