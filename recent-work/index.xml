@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent Works on Jorge Sousa Pinto</title>
+    <link>https://jspdium.github.io/recent-work/</link>
+    <description>Recent content in Recent Works on Jorge Sousa Pinto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Oct 2022 12:42:12 +0100</lastBuildDate><atom:link href="https://jspdium.github.io/recent-work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Verifying Paxos by Refinement with Why3</title>
+      <link>https://jspdium.github.io/recent-work/paxosrfnwhy3/</link>
+      <pubDate>Tue, 11 Oct 2022 12:42:12 +0100</pubDate>
+      
+      <guid>https://jspdium.github.io/recent-work/paxosrfnwhy3/</guid>
+      <description>With Cláudio Lourenço I am investigating the use of Why3 to verify safety properties of TLA+ specifications (without temporal operators). We have successfuly verified the Paxos consensus algorithm, following Lamport&amp;rsquo;s refinement of the abstract Voting protocol. We will report on this soon.</description>
+    </item>
+    
+    <item>
+      <title>A Verified VCGen Based on Dynamic Logic</title>
+      <link>https://jspdium.github.io/recent-work/dlkey/</link>
+      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jspdium.github.io/recent-work/dlkey/</guid>
+      <description>An exercise in meta-verification with Why3. This unpublished paper, co-authored with Maria João Frade, is dedicated to our colleague Luís Soares Barbosa, on the occasion of his 60th birthday.
+With the incresasing importance of program verification, an issue that has been receiving more attention is the certification of verification tools, addressing the question: “Who verifies the verifier?”.
+We approach this meta-verification problem by considering a fundamental component of program verifiers: the “Verification Conditions Generator” (VCGen), responsible for producing a set of proof obligations from a program and a specification.</description>
+    </item>
+    
+    <item>
+      <title>Why3-do</title>
+      <link>https://jspdium.github.io/recent-work/why3do/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jspdium.github.io/recent-work/why3do/</guid>
+      <description>The Way of Harmonious Distributed System Proofs. In this ESOP&#39;22 paper jointly written with Cláudio Belo Lourenço, we study principles and models for reasoning inductively about properties of distributed systems, based on programmed atomic handlers equipped with contracts. We present the Why3-do library, leveraging a state of the art software verifier for reasoning about distributed systems based on our models, and illustrate its use with a number of examples involving invariants containing existential and nested quantifiers (including Dijsktra’s self-stabilizing systems).</description>
+    </item>
+    
+    <item>
+      <title>JSS&#39;21</title>
+      <link>https://jspdium.github.io/recent-work/jss21/</link>
+      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jspdium.github.io/recent-work/jss21/</guid>
+      <description>A Deductive Reasoning Approach for Database Applications using Verification Conditions I. Alam, R. Halder, and J. S. Pinto. Journal of Systems and Software, 175:110903, 2021. Elsevier
+This paper proposes a comprehensive set of Verification Condition (VCs) generation techniques from database programs, adapting Symbolic Execution, Conditional Normal Form, and Weakest Precondition. The validity checking of the generated VCs for a database program determines its correctness w.r.t. the annotated database properties. The developed prototype DBverify based on our theoretical foundation allows us to instantiate VC generation from PL/SQL codes, yielding a detailed performance analysis of the three approaches under different circumstances.</description>
+    </item>
+    
+  </channel>
+</rss>
