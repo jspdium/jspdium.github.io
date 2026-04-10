@@ -333,7 +333,7 @@ footer {
 
 /* ── Responsive ──────────────────────────────────────────────────── */
 @media (max-width: 600px) {
-  html { font-size: 17px; }
+  html { font-size: 18px; }
 
   header {
     flex-direction: column;
