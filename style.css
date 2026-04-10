@@ -332,8 +332,8 @@ footer {
 }
 
 /* ── Responsive ──────────────────────────────────────────────────── */
-@media (max-width: 600px) {
-  html { font-size: 18px; }
+@media (max-width: 768px) {
+  html { font-size: 19px; }
 
   header {
     flex-direction: column;
