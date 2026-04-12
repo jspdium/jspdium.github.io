@@ -333,6 +333,10 @@ footer {
 }
 
 /* ── Responsive ──────────────────────────────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html { font-size: 23px; }
+}
+
 @media (max-width: 768px) {
   html { font-size: 20px; }
 
