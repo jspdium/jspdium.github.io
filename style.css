@@ -28,7 +28,8 @@
   --rule:     #cddfc8;
   --bg:       #f6faf4;
   --bg-tint:  #edf5ea;
-  --accent:   #3a6b30;   /* deep terracotta — restrained, academic */
+  --accent:   #3a6b30;
+  --link:     #7a3040;   /* deep terracotta — restrained, academic */
   --max:      680px;
   --mono:     'JetBrains Mono', monospace;
   --serif:    'et-book', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
@@ -83,7 +84,7 @@ p { margin-bottom: 0.9rem; }
 p:last-child { margin-bottom: 0; }
 
 a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
