@@ -1,6 +1,7 @@
 # MSc Thesis Proposal: Deductive Verification in Lean 4 with LLM Assistance
 
 **Supervisors:** Jorge Sousa Pinto and Maria João Frade
+
 **Proposal written with assistance from Mistral Vibe (Lean agent)**
 
 ---

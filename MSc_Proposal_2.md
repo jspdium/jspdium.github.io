@@ -1,6 +1,7 @@
 # MSc Thesis Proposal: Deductive Verification of Ephemeral Trust for Secure CI/CD Runners
 
 **Supervisors:** Jorge Sousa Pinto and Simão Melo de Sousa
+
 **Proposal written with assistance from Mistral Vibe (Lean agent)**
 
 This proposal is in the scope of the BRINGTRUST project.
