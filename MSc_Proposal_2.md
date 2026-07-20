@@ -1,6 +1,6 @@
 # MSc Thesis Proposal: Deductive Verification of Ephemeral Trust for Secure CI/CD Runners
 
-**Supervisors:** Jorge Sousa Pinto and Simão Melo de Sousa
+**Supervisors:** Jorge Sousa Pinto and Simão Melo de Sousa (UAlgarve)
 
 **Proposal written with assistance from Mistral Vibe (Lean agent)**
 
