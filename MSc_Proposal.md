@@ -165,6 +165,7 @@ Functional/Distributed specs (natural language or pseudo-code)
 ### 3.3 Case Studies
 
 **Functional Programs:**
+
 | Algorithm | Complexity | Proof Focus |
 |-----------|------------|------------|
 | Insertion Sort | O(n^2) | Preserves sorted invariant |
@@ -172,6 +173,7 @@ Functional/Distributed specs (natural language or pseudo-code)
 | Binary Search | O(log n) | Index bounds, termination |
 
 **Distributed Algorithms:**
+
 | Algorithm | Complexity | Expected Difficulty |
 |-----------|------------|---------------------|
 | Chang-Roberts | ~100 lines | Medium (state propagation) |
